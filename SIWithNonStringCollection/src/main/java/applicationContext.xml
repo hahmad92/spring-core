@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+                http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="question" class="com.javatpoint.Question">
+		<property name="id" value="1"> </property>
+		<property name="name" value="Who is PM of Pakistan?"></property>
+		<property name="answers">
+			<list>
+			<ref bean='ans1'/>
+			<ref bean='ans2'/>
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="ans1" class="com.javatpoint.Answer">
+		<property name="id" value="1"></property>
+		<property name="name" value="Imran Khan"></property>
+		<property name="by" value="Hammad"></property>
+	</bean>
+	<bean id="ans2" class="com.javatpoint.Answer">
+		<property name="id" value="2"></property>
+		<property name="name" value="Arif Alvi"></property>
+		<property name="by" value="Ammad"></property>
+	</bean>
+	
+</beans>  
